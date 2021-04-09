@@ -12,8 +12,8 @@ const postSchema = new Schema({
     required: true
   },
   date: {
-    type: String,
-    default: new Date().getTime()/1000
+    type: Date,
+    default: Math.round(new Date().getTime()/1000)
   }
 })
 
