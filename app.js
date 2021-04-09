@@ -6,6 +6,7 @@ const connectDB      = require('./config/db')
 
 // Nhap khau routes
 const posts = require('./routes/posts')
+const social = require('./routes/social')
 
 // Khoi dong app
 const app = express()
@@ -26,7 +27,6 @@ app.use(express.json())
 
 // Ket noi co so du lieu
 connectDB()
-// onSignIn()
 
 // Mot so routes co ban, co the dua vao file rieng trong thu muc routes
 app.get('/', (req, res) => res.render('index'))
@@ -34,6 +34,7 @@ app.get('/about', (req, res) => res.render('about'))
 
 // Mang routes vao de su dung
 app.use('/posts', posts)
+app.use('/social', social)
 
 const PORT = process.env.PORT || 5000
 
