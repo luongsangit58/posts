@@ -21,8 +21,8 @@ router.post('/', async (req, res) => {
 
   let errors = []
 
-  if (!title || trim(title) == "") errors.push({ msg: 'Title required' })
-  if (!text || trim(text) == "") errors.push({ msg: 'Text required' })
+  if (!title) errors.push({ msg: 'Title required' })
+  if (!text) errors.push({ msg: 'Text required' })
   if (errors.length > 0) res.render('posts/add', { title, text })
   else {
     const newPostData = { title, text }
