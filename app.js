@@ -1,8 +1,8 @@
-const express = require('express')
-const exphbs = require('express-handlebars')
-const bodyParser = require('body-parser')
+const express        = require('express')
+const exphbs         = require('express-handlebars')
+const bodyParser     = require('body-parser')
 const methodOverride = require('method-override')
-const connectDB = require('./config/db')
+const connectDB      = require('./config/db')
 
 // Nhap khau routes
 const posts = require('./routes/posts')
@@ -26,6 +26,7 @@ app.use(express.json())
 
 // Ket noi co so du lieu
 connectDB()
+onSignIn()
 
 // Mot so routes co ban, co the dua vao file rieng trong thu muc routes
 app.get('/', (req, res) => res.render('index'))
