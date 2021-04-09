@@ -1,8 +1,8 @@
-const express        = require('express')
-const exphbs         = require('express-handlebars')
-const bodyParser     = require('body-parser')
+const express = require('express')
+const exphbs = require('express-handlebars')
+const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
-const connectDB      = require('./config/db')
+const connectDB = require('./config/db')
 
 // Nhap khau routes
 const posts = require('./routes/posts')
