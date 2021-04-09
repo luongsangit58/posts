@@ -6,7 +6,6 @@ const connectDB      = require('./config/db')
 
 // Nhap khau routes
 const posts = require('./routes/posts')
-const social = require('./routes/social')
 
 // Khoi dong app
 const app = express()
@@ -34,7 +33,6 @@ app.get('/about', (req, res) => res.render('about'))
 
 // Mang routes vao de su dung
 app.use('/posts', posts)
-app.use('/social', social)
 
 const PORT = process.env.PORT || 5000
 
