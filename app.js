@@ -26,7 +26,7 @@ app.use(express.json())
 
 // Ket noi co so du lieu
 connectDB()
-onSignIn()
+// onSignIn()
 
 // Mot so routes co ban, co the dua vao file rieng trong thu muc routes
 app.get('/', (req, res) => res.render('index'))
